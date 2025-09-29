@@ -1,2 +1,5 @@
-# Luma-Website
-Official Luma Engine website. A static website built using react and javascript
+# Luma Engine Website
+
+Official website for Luma - a high-performance 3D game engine for desktop platforms.
+
+
