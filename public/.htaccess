@@ -2,10 +2,12 @@
   RewriteEngine On
   RewriteBase /
 
-  # Don't rewrite files or directories
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
+  # Maintenance mode - uncomment to enable
+    RewriteCond %{REQUEST_URI} !^/maintenance\.html$
+    RewriteRule ^(.*)$ /maintenance.html [L,R=503]
 
-  # Rewrite everything else to index.html
-  RewriteRule . /index.html [L]
+    # Normal SPA routing (comment out when in maintenance)
+    # RewriteCond %{REQUEST_FILENAME} !-f
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteRule . /index.html [L]
 </IfModule>
