@@ -1,4 +1,4 @@
-import Luma512 from '../../assets/Luma-512.png';
+import { homeImages } from "../../constants/images";
 
 function Hero() {
     return (
@@ -20,7 +20,7 @@ function Hero() {
                         </div>
                     </div>
                     <div className="col-span-6">
-                        <img src={Luma512} width="100%" height="100%" alt="Luma Logo" className="w-full max-w-xl mx-auto rounded-lg" />
+                        <img src={homeImages.luma512} width="100%" height="100%" alt="Luma Logo" className="w-full max-w-xl mx-auto rounded-lg" />
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import Placeholder3 from '../../assets/Placeholder3.png';
+import { homeImages } from "../../constants/images";
 
 function Future() {
     return (
@@ -18,7 +18,7 @@ function Future() {
                         </div>
                     <div className="relative w-full h-auto px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:py-20">
                         <div className="overflow-hidden shadow-xl rounded-2xl">
-                            <img imgh="" src={ Placeholder3 } width="1567" height="1320" className="w-full h-auto" alt="P3" loading="lazy" />
+                            <img imgh="" src={ homeImages.placeholder3 } width="1567" height="1320" className="w-full h-auto" alt="P3" loading="lazy" />
                         </div>
                     </div>
                 </div>

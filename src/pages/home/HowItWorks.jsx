@@ -1,4 +1,4 @@
-import Placeholder2 from '../../assets/Placeholder2.png';
+import { homeImages } from "../../constants/images";
 
 function How() {
     return (
@@ -35,7 +35,7 @@ function How() {
                         </svg>
                     </div>
                     <div className="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12">
-                    <img imgh="" src={ Placeholder2 } width="753" height="548" alt="p2" className="w-full rounded-lg shadow-xl lg:h-full lg:w-auto lg:max-w-none" loading="lazy" />
+                    <img imgh="" src={ homeImages.placeholder2 } width="753" height="548" alt="p2" className="w-full rounded-lg shadow-xl lg:h-full lg:w-auto lg:max-w-none" loading="lazy" />
                     </div>
                 </div>
             </div>

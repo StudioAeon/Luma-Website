@@ -15,9 +15,11 @@ export default function RootLayout() {
     return (
         <>
             <Navbar />
-            <Suspense fallback={<PageLoader />}>
-                <Outlet />
-            </Suspense>
+            <main id="main-content" role="main">
+                <Suspense fallback={<PageLoader />}>
+                    <Outlet />
+                </Suspense>
+            </main>
             <Footer />
         </>
     );

@@ -1,4 +1,4 @@
-import Placeholder from '../../assets/Placeholder.png';
+import { homeImages } from "../../constants/images";
 
 function Why() {
     return (
@@ -18,7 +18,7 @@ function Why() {
                     </div>
                     <div className="relative w-full h-auto px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:py-20">
                         <div className="overflow-hidden shadow-xl rounded-2xl">
-                           <img imgh="" src={ Placeholder } width="512" height="512" className="w-full h-auto" alt="P1" loading="lazy"/>
+                           <img imgh="" src={ homeImages.placeholder } width="512" height="512" className="w-full h-auto" alt="P1" loading="lazy"/>
                         </div>
                     </div>
                 </div>
