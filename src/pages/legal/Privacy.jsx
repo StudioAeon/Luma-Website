@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
-  const [activeTab, setActiveTab] = useState('privacy');
+  const location = useLocation();
+
+  const getActiveTab = () => {
+    if (location.pathname === '/license') return 'license';
+    if (location.pathname === '/privacy-policy') return 'privacy';
+    if (location.pathname === '/code-of-conduct') return 'conduct';
+    return 'privacy';
+  };
 
   const tabs = [
-    { id: 'license', label: 'License', href: '/license' },
-    { id: 'privacy', label: 'Privacy', href: '/privacy-policy' },
-    { id: 'conduct', label: 'Code of Conduct', href: '/code-of-conduct' },
+    { id: 'license', label: 'License', path: '/license' },
+    { id: 'privacy', label: 'Privacy', path: '/privacy-policy' },
+    { id: 'conduct', label: 'Code of Conduct', path: '/code-of-conduct' },
   ];
+
+  const activeTab = getActiveTab();
 
   return (
       <div className="min-h-screen latte:bg-latte-base mocha:bg-mocha-base">
@@ -25,23 +35,17 @@ const PrivacyPolicy = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="flex space-x-8 overflow-x-auto">
               {tabs.map((tab) => (
-                  <a
+                  <Link
                       key={tab.id}
-                      href={tab.href}
+                      to={tab.path}
                       className={`py-4 px-1 border-b-2 font-medium text-sm whitespace-nowrap transition-colors ${
                           activeTab === tab.id
                               ? "latte:border-latte-lavender mocha:border-mocha-lavender latte:text-latte-lavender mocha:text-mocha-lavender"
                               : "border-transparent latte:text-latte-subtext0 mocha:text-mocha-subtext0 latte:hover:text-latte-text mocha:hover:text-mocha-text latte:hover:border-latte-overlay0 mocha:hover:border-mocha-overlay0"
                       }`}
-                      onClick={(e) => {
-                        if (tab.id === "privacy") {
-                          e.preventDefault(); // stay on current page
-                          setActiveTab(tab.id);
-                        }
-                      }}
                   >
                     {tab.label}
-                  </a>
+                  </Link>
               ))}
             </nav>
           </div>
