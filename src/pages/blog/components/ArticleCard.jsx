@@ -4,7 +4,7 @@ const ArticleCard = ({ article }) => {
     return (
         <a
             href={`/blog/articles/${article.slug}`}
-            className="group flex flex-col rounded-2xl overflow-hidden latte:bg-latte-mantle mocha:bg-mocha-mantle shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+            className="group bg-latte-mantle mocha:bg-mocha-mantle rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
         >
             {/* Article Image */}
             <div className="relative h-48 overflow-hidden latte:bg-latte-surface0 mocha:bg-mocha-surface0">
@@ -14,40 +14,33 @@ const ArticleCard = ({ article }) => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     loading="lazy"
                 />
-            </div>
-
-            {/* Article Content */}
-            <div className="flex-1 p-6 flex flex-col">
-                <div className="flex-1">
-                    <h3 className="text-xl font-bold latte:text-latte-text mocha:text-mocha-text group-hover:latte:text-latte-lavender group-hover:mocha:text-mocha-lavender transition-colors">
-                        {article.title}
-                    </h3>
-                    <p className="mt-3 text-base latte:text-latte-subtext1 mocha:text-mocha-subtext1">
-                        {article.description}
-                    </p>
-                </div>
-
-                {/* Tag */}
-                <div className="mt-4">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium latte:bg-latte-lavender/20 mocha:bg-mocha-lavender/20 latte:text-latte-lavender mocha:text-mocha-lavender">
+                {/* Tag Overlay */}
+                <div className="absolute top-4 right-4">
+          <span className="inline-block px-3 py-1 latte:bg-latte-lavender mocha:bg-mocha-lavender latte:text-latte-base mocha:text-mocha-base text-sm font-semibold rounded-full shadow-lg">
             {article.tag}
           </span>
                 </div>
+            </div>
+
+            {/* Article Content */}
+            <div className="p-6">
+                <h3 className="text-xl font-bold latte:text-latte-text mocha:text-mocha-text group-hover:latte:text-latte-lavender group-hover:mocha:text-mocha-lavender transition-colors mb-3">
+                    {article.title}
+                </h3>
+                <p className="latte:text-latte-subtext1 mocha:text-mocha-subtext1 text-sm mb-4 line-clamp-2">
+                    {article.description}
+                </p>
 
                 {/* Author Info */}
-                <div className="mt-4 flex items-center">
-                    <div className="flex-shrink-0">
-                        <div className="h-10 w-10 rounded-full latte:bg-latte-surface0 mocha:bg-mocha-surface0 flex items-center justify-center latte:text-latte-text mocha:text-mocha-text font-semibold">
+                <div className="flex items-center justify-between pt-4 border-t latte:border-latte-overlay0 mocha:border-mocha-overlay0">
+                    <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 rounded-full latte:bg-latte-lavender mocha:bg-mocha-lavender flex items-center justify-center latte:text-latte-base mocha:text-mocha-base font-semibold text-sm">
                             {article.author[0]}
                         </div>
+                        <span className="text-sm latte:text-latte-text mocha:text-mocha-text">{article.author}</span>
                     </div>
-                    <div className="ml-3">
-                        <p className="text-sm font-medium latte:text-latte-text mocha:text-mocha-text">
-                            {article.author}
-                        </p>
-                        <p className="text-sm latte:text-latte-subtext0 mocha:text-mocha-subtext0">
-                            {article.date} · {article.readTime}
-                        </p>
+                    <div className="text-xs latte:text-latte-subtext0 mocha:text-mocha-subtext0">
+                        {article.date}
                     </div>
                 </div>
             </div>

@@ -6,3 +6,4 @@ export {default as Footer} from './layout/Footer';
 export {default as CategoryFilter} from './ui/CategoryFilter';
 export {default as DownloadButton} from './ui/DownloadButton';
 export {default as ThemeButton} from './ui/ThemeButton';
+export {default as Pagination} from './ui/Pagination';

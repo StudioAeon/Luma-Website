@@ -15,6 +15,10 @@ export const blogRoutes = [
                 element: <Blog />
             },
             {
+                path: ":page",
+                element: <Blog />
+            },
+            {
                 path: "articles",
                 children: [
                     {

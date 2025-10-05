@@ -1,14 +1,24 @@
 import roadmap2026 from "../../assets/blog/2026-roadmap.png";
-import sdl3migration from "../../assets/blog/sdl3-migration.png"
-import pbrrenderer from "../../assets/blog/pbr-renderer.png"
+import placeholder from "../../assets/blog/Placeholder.png"
 
 function DevBlog() {
     const articles = [
         {
             id: 1,
+            title: "2026 Roadmap",
+            description: "My plans for Luma Engine throughout 2025 and beyond.",
+            image: roadmap2026,
+            tag: "Meta",
+            author: "Astrix",
+            date: "01/01/2025",
+            readTime: "3 min read",
+            slug: "2025-roadmap"
+        },
+        {
+            id: 2,
             title: "Migrating from GLFW to SDL3",
-            description: "A deep dive into our transition to SDL3 and the improvements it brought to the engine.",
-            image: sdl3migration,
+            description: "A deep dive into my transition to SDL3 and the improvements it brought to the engine.",
+            image: placeholder,
             tag: "Engine",
             author: "Astrix",
             date: "01/15/2025",
@@ -16,27 +26,16 @@ function DevBlog() {
             slug: "sdl3-migration"
         },
         {
-            id: 2,
+            id: 3,
             title: "Building a PBR Renderer",
             description: "How I implemented physically-based rendering with Cook-Torrance BRDF and IBL.",
-            image: pbrrenderer,
+            image: placeholder,
             tag: "Rendering",
             author: "Astrix",
             date: "01/08/2025",
             readTime: "8 min read",
             slug: "pbr-renderer"
         },
-        {
-            id: 3,
-            title: "2026 Roadmap",
-            description: "Our plans for Luma Engine throughout 2025 and beyond.",
-            image: roadmap2026,
-            tag: "Meta",
-            author: "Astrix",
-            date: "01/01/2025",
-            readTime: "3 min read",
-            slug: "2025-roadmap"
-        }
     ];
 
     return (
