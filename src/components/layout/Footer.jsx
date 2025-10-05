@@ -4,7 +4,7 @@ const Footer = () => {
     const navLinks = [
       { href: "/documentation/", title: "Documentation" },
       { href: "/about/", title: "About" },
-      { href: "https://github.com/rrandel-tech/Zenith", title: "Source Code" },
+      { href: "https://github.com/StudioAeon/Luma", title: "Source Code" },
       { href: "/code-of-conduct/", title: "Code Of Conduct" },
       { href: "/privacy-policy/", title: "Privacy Policy" },
       { href: "/license/", title: "License" },
@@ -12,7 +12,7 @@ const Footer = () => {
 
     const socialLinks = [
       {
-        href: "https://github.com/rrandel-tech/Zenith",
+        href: "https://github.com/StudioAeon/Luma",
         label: "GitHub",
         icon: (
           <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -30,7 +30,7 @@ const Footer = () => {
         ),
       },
       {
-        href: "https://patreon.com/zenithengine",
+        href: "https://patreon.com/lumaengine",
         label: "Patreon",
         icon: (
           <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

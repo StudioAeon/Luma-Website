@@ -1,8 +1,8 @@
 import { useCallback, useState } from "react";
-import Luma256 from '../assets/Luma-256.png';
-import ThemeButton from './ThemeButton';
-import MenuButton from './MenuButton';
-import DownloadButton from "./DownloadButton";
+import Luma256 from '../../../assets/Luma-256.png';
+import ThemeButton from '../../ui/ThemeButton.jsx';
+import MenuButton from './MenuButton.jsx';
+import DownloadButton from "../../ui/DownloadButton.jsx";
 
 const Navbar = () => {
    const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="top-0 z-50 w-full text-mocha-text bg-mocha-crust border-2 border-mocha-surface0 md:sticky border-b-mocha-base">
          <div className="flex flex-col max-w-full px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
             <div className="flex flex-row items-center justify-between p-4">
-               <a href="/" className="flex text-mocha-text transition duration-1000 ease-in-out group">
+               <a href="/public" className="flex text-mocha-text transition duration-1000 ease-in-out group">
                   <img src={Luma256} className="transition-opacity h-9 w-9 group-hover:opacity-50 group-focus:opacity-70" alt="Luma Engine Logo" />
                   <div className="mt-1 ml-3 text-xl font-black tracking-tight text-mocha-text uppercase transition-colors group-hover:text-mocha-subtext0"> Luma Engine</div>
                </a>
