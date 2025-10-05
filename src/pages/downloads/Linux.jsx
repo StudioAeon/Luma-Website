@@ -7,12 +7,6 @@ const Linux = () => {
             subtitle: "x86_64",
             version: "1.0.0",
             date: "15 September 2025"
-        },
-        {
-            name: "Linux - ARM64",
-            subtitle: "ARM64",
-            version: "1.0.0",
-            date: "15 September 2025"
         }
     ];
 
@@ -44,7 +38,7 @@ const Linux = () => {
                     {/* Primary Download Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
                         <a
-                            href="https://github.com/StudioAeon/Luma/releases/latest"
+                            href="#" //TODO
                             className="group w-full sm:w-auto px-8 py-4 latte:bg-latte-lavender mocha:bg-mocha-lavender latte:text-latte-base mocha:text-mocha-base rounded-lg font-semibold text-lg shadow-lg latte:hover:bg-latte-mauve mocha:hover:bg-mocha-mauve transition-all transform hover:scale-105 flex items-center justify-between"
                         >
                             <div className="flex items-center">
@@ -115,7 +109,7 @@ const Linux = () => {
                             <li>Extract and run. Luma is self-contained and does not require installation.</li>
                             <li>
                                 If you run into an issue, check the{" "}
-                                <a href="https://lumadocs.com/troubleshooting" className="latte:text-latte-lavender mocha:text-mocha-lavender hover:underline">
+                                <a href="https://lumadocs.com/troubleshooting" className="latte:text-latte-lavender mocha:text-mocha-lavender hover:underline"> {/* TODO: proper link */}
                                     Troubleshooting
                                 </a>{" "}
                                 page for common issues and their solutions.
@@ -133,7 +127,7 @@ const Linux = () => {
                         {downloadLinks.map((download, index) => (
                             <a
                                 key={index}
-                                href="https://github.com/StudioAeon/Luma/releases/latest"
+                                href="#" //TODO
                                 className="block latte:bg-latte-surface0 mocha:bg-mocha-surface0 latte:hover:bg-latte-surface1 mocha:hover:bg-mocha-surface1 rounded-lg p-4 transition-colors"
                             >
                                 <div className="flex items-center justify-between">
@@ -160,7 +154,7 @@ const Linux = () => {
                         {distributionPlatforms.map((platform, index) => (
                             <a
                                 key={index}
-                                href="#"
+                                href="#" //TODO
                                 className={`px-6 py-3 ${platform.color} text-white rounded-lg font-semibold flex items-center gap-2 transition-colors shadow-md`}
                             >
                                 <span className="text-2xl">{platform.icon}</span>

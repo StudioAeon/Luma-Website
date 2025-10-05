@@ -79,7 +79,7 @@ function Pricing() {
                         <a
                             href="mailto:contact@example.com"
                             className="mt-8 block w-full py-3 px-6 text-center rounded-md latte:bg-latte-surface0 mocha:bg-mocha-surface0 latte:text-latte-text mocha:text-mocha-text font-medium latte:hover:bg-latte-surface1 mocha:hover:bg-mocha-surface1 transition-colors"
-                        >
+                        > {/* TODO: Proper email */}
                             Contact
                         </a>
                     </div>

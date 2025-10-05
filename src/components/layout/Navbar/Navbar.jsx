@@ -12,7 +12,7 @@ const Navbar = () => {
       { href: "/", title: "Home" },
       { href: "https://lumadocs.com/", title: "Documentation" },
       { href: "/blog", title: "Blog"}
-   ];
+   ]; {/* TODO: Proper Link lumadocs */}
 
    return (
       <div className="top-0 z-50 w-full text-mocha-text bg-mocha-crust border-2 border-mocha-surface0 md:sticky border-b-mocha-base">
